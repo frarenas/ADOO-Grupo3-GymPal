@@ -1,4 +1,4 @@
-package model;
+package ar.edu.uade.model;
 
 import java.util.Date;
 

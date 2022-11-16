@@ -1,4 +1,4 @@
-package model;
+package ar.edu.uade.model;
 
 public class NotificacionPush {
 	

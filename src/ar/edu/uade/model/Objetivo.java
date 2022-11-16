@@ -1,6 +1,4 @@
-package model;
-
-import java.util.List;
+package ar.edu.uade.model;
 
 public abstract class Objetivo {
 	
