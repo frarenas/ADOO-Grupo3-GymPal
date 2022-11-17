@@ -1,4 +1,6 @@
-package ar.edu.uade.model;
+package ar.edu.uade.abstractions;
+
+import ar.edu.uade.model.socio.SexoBiologico;
 
 public interface IAdapterMedicion {
 	
