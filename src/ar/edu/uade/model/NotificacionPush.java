@@ -1,5 +1,7 @@
 package ar.edu.uade.model;
 
+import ar.edu.uade.abstractions.IAdapterNotificacionPush;
+
 public class NotificacionPush {
 	
 	private IAdapterNotificacionPush adapterNotificacionPush;

@@ -1,5 +1,7 @@
 package ar.edu.uade.model;
 
+import ar.edu.uade.abstractions.IAdapterMedicion;
+
 import java.util.Date;
 
 public class Medicion {
