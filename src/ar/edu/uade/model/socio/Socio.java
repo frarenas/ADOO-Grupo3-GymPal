@@ -1,10 +1,11 @@
 package ar.edu.uade.model.socio;
 
-import ar.edu.uade.abstractions.AbstractTrofeoObservador;
+
 import ar.edu.uade.abstractions.IAdapterMedicion;
 import ar.edu.uade.dto.SocioDTO;
 import ar.edu.uade.model.Medicion;
 import ar.edu.uade.model.Objetivo;
+import ar.edu.uade.model.Trofeo;
 
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class Socio {
 	private String nombre;
 	private int documento;
 	private int edad;
-	private String sexo;
+	private SexoBiologico sexo;
 	private String email;
 	private Double altura;
 	private Double peso;
@@ -21,7 +22,7 @@ public class Socio {
 	private List<Medicion> mediciones = null;
 	private List<Objetivo> historialObjetivos = null;
 	private IAdapterMedicion adapterMedicion = null;
-	private List<AbstractTrofeoObservador> trofeosGanados = null;
+	private List<Trofeo> trofeosGanados = null;
 
 	public void registrarSocio(SocioDTO socio) {
 		this.nombre = socio.nombre;
@@ -65,11 +66,11 @@ public class Socio {
 		this.edad = edad;
 	}
 
-	public String getSexo() {
+	public SexoBiologico getSexo() {
 		return sexo;
 	}
 
-	public void setSexo(String sexo) {
+	public void setSexo(SexoBiologico sexo) {
 		this.sexo = sexo;
 	}
 
