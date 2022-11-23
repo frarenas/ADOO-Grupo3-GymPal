@@ -8,10 +8,10 @@ public class Medicion {
 	
 	private IAdapterMedicion adapterMedicion;
 	private Date fecha;
-	private Double altura;
-	private Double peso;
+	private double altura;
+	private double peso;
 	
-	public Medicion(Double altura, Double peso) {
+	public Medicion(double altura, double peso) {
 		this.fecha = new Date();
 		this.altura = altura;
 		this.peso = peso;

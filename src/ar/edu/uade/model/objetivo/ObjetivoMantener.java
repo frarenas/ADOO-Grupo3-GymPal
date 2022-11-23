@@ -5,7 +5,7 @@ import ar.edu.uade.model.Rutina;
 
 public class ObjetivoMantener extends Objetivo{
 
-    private Double pesoActual;
+    private double pesoActual;
     private Integer NUnidades;
 
     @Override

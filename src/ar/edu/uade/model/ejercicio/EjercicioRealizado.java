@@ -7,5 +7,5 @@ public class EjercicioRealizado {
     private Date fecha;
     private Ejercicio ejercicio;
     private Integer repeticiones;
-    private Double cargaRealizada;
+    private double cargaRealizada;
 }

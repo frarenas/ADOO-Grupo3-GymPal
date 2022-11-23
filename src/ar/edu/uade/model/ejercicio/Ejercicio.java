@@ -9,11 +9,11 @@ public class Ejercicio {
 	private GrupoMuscular grupoMuscular;
 	private int series;
 	private int repeticiones;
-	private Double carga;
+	private double carga;
 	private int nivelAerobico;
 	private ExigenciaMuscular exigenciaMuscular;
 	private String urlVideoMuestra;
-	private Double refuerzo;
+	private double refuerzo;
 
 	//GETTERS & SETTERS
 
@@ -50,7 +50,7 @@ public class Ejercicio {
 		this.repeticiones = repeticiones;
 	}
 
-	public Double getCarga() {
+	public double getCarga() {
 		return carga;
 	}
 
@@ -82,7 +82,7 @@ public class Ejercicio {
 		this.urlVideoMuestra = urlVideoMuestra;
 	}
 
-	public Double getRefuerzo() {
+	public double getRefuerzo() {
 		return refuerzo;
 	}
 

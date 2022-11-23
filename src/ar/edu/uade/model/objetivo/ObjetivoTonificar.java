@@ -5,8 +5,8 @@ import ar.edu.uade.model.Rutina;
 
 public class ObjetivoTonificar extends Objetivo{
 
-    private Double grasaCorporalIdeal;
-    private Double masaMuscularIdeal;
+    private double grasaCorporalIdeal;
+    private double masaMuscularIdeal;
 
 
     @Override

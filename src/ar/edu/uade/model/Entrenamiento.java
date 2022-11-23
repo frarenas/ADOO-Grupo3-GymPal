@@ -7,7 +7,7 @@ import java.util.List;
 public class Entrenamiento {
 	
 	private List<Ejercicio> ejercicios;
-	private Double duracion;
+	private double duracion;
 
 	public void crearEntrenamiento(){
 		throw new UnsupportedOperationException();

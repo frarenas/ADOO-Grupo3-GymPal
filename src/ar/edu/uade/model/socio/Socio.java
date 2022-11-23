@@ -16,8 +16,8 @@ public class Socio {
 	private int edad;
 	private SexoBiologico sexo;
 	private String email;
-	private Double altura;
-	private Double peso;
+	private double altura;
+	private double peso;
 	private Objetivo objetivo = null;
 	private List<Medicion> mediciones = null;
 	private List<Objetivo> historialObjetivos = null;
@@ -38,7 +38,7 @@ public class Socio {
 		this.objetivo = objetivo;
 	}
 
-	public void actualizarPeso(Double peso) {
+	public void actualizarPeso(double peso) {
 		this.peso = peso;
 	}
 
@@ -82,19 +82,19 @@ public class Socio {
 		this.email = email;
 	}
 
-	public Double getAltura() {
+	public double getAltura() {
 		return altura;
 	}
 
-	public void setAltura(Double altura) {
+	public void setAltura(double altura) {
 		this.altura = altura;
 	}
 
-	public Double getPeso() {
+	public double getPeso() {
 		return peso;
 	}
 
-	public void setPeso(Double peso) {
+	public void setPeso(double peso) {
 		this.peso = peso;
 	}
 
