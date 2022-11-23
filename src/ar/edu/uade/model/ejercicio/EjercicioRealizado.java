@@ -1,4 +1,4 @@
-package ar.edu.uade.model;
+package ar.edu.uade.model.ejercicio;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package ar.edu.uade.model;
+package ar.edu.uade.model.trofeo;
 
 import ar.edu.uade.model.socio.Socio;
 

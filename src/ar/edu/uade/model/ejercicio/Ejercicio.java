@@ -1,4 +1,7 @@
-package ar.edu.uade.model;
+package ar.edu.uade.model.ejercicio;
+
+import ar.edu.uade.model.ExigenciaMuscular;
+import ar.edu.uade.model.GrupoMuscular;
 
 public class Ejercicio {
 	

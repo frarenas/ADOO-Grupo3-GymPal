@@ -1,4 +1,7 @@
-package ar.edu.uade.model;
+package ar.edu.uade.model.objetivo;
+
+import ar.edu.uade.model.NotificacionPush;
+import ar.edu.uade.model.Rutina;
 
 public class ObjetivoMantener extends Objetivo{
 

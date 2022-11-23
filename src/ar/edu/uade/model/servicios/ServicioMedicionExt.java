@@ -1,4 +1,4 @@
-package ar.edu.uade.model;
+package ar.edu.uade.model.servicios;
 
 import ar.edu.uade.abstractions.IAdapterMedicion;
 import ar.edu.uade.model.socio.SexoBiologico;

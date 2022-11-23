@@ -1,18 +1,19 @@
-package ar.edu.uade.model;
+package ar.edu.uade.model.objetivo;
+
+import ar.edu.uade.model.NotificacionPush;
+import ar.edu.uade.model.Rutina;
 
 public class ObjetivoBajarPeso extends Objetivo{
-    private Double pesoObjetivo;
+    private double pesoObjetivo;
 
     public boolean objetivoCumplido(){
         return true;
     }
 
-    @Override
     public Rutina crearRutina() {
         return null;
     }
 
-    @Override
     public NotificacionPush sugerirObjetivo() {
         return null;
     }

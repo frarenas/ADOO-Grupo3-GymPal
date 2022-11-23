@@ -1,10 +1,10 @@
-package ar.edu.uade.model;
+package ar.edu.uade.model.trofeo;
 
 import ar.edu.uade.model.socio.Socio;
 
-public class TrofeoConstancia extends Trofeo{
+public class TrofeoCreido extends Trofeo{
 
-    private Rutina rutinaObservado;
+    private Socio socioObservado;
 
     @Override
     public void generarTrofeo(Socio socio) {

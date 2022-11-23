@@ -1,5 +1,7 @@
 package ar.edu.uade.model;
 
+import ar.edu.uade.model.ejercicio.Ejercicio;
+
 import java.util.List;
 
 public class Entrenamiento {

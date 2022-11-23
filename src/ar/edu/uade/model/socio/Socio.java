@@ -4,8 +4,8 @@ package ar.edu.uade.model.socio;
 import ar.edu.uade.abstractions.IAdapterMedicion;
 import ar.edu.uade.dto.SocioDTO;
 import ar.edu.uade.model.Medicion;
-import ar.edu.uade.model.Objetivo;
-import ar.edu.uade.model.Trofeo;
+import ar.edu.uade.model.objetivo.Objetivo;
+import ar.edu.uade.model.trofeo.Trofeo;
 
 import java.util.List;
 
