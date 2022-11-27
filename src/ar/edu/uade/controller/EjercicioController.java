@@ -1,7 +1,7 @@
 package ar.edu.uade.controller;
 
-import ar.edu.uade.model.ExigenciaMuscular;
-import ar.edu.uade.model.GrupoMuscular;
+import ar.edu.uade.enums.ExigenciaMuscular;
+import ar.edu.uade.enums.GrupoMuscular;
 import ar.edu.uade.model.dto.*;
 import ar.edu.uade.model.ejercicio.Ejercicio;
 

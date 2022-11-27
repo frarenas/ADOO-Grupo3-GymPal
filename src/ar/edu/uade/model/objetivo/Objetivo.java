@@ -5,7 +5,6 @@ import ar.edu.uade.model.Rutina;
 
 public abstract class Objetivo {
 	
-	private int duracionSemanas = 4;
 	private Rutina rutina;
 
 	public abstract boolean objetivoCumplido();

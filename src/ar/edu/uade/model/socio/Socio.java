@@ -2,6 +2,7 @@ package ar.edu.uade.model.socio;
 
 
 import ar.edu.uade.abstractions.IAdapterMedicion;
+import ar.edu.uade.enums.SexoBiologico;
 import ar.edu.uade.model.Medicion;
 import ar.edu.uade.model.objetivo.Objetivo;
 import ar.edu.uade.model.servicios.ServicioMedicionExt;

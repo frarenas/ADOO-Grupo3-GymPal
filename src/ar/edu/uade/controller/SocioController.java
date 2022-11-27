@@ -1,6 +1,7 @@
 package ar.edu.uade.controller;
 
 import ar.edu.uade.model.ResultadoOperacion;
+import ar.edu.uade.model.dto.SocioDTO;
 import ar.edu.uade.model.socio.Socio;
 
 import java.util.*;
@@ -35,5 +36,11 @@ public class SocioController {
 
     public void logout() {
         socioLogueado = null;
+    }
+
+    public void guardarSocio(SocioDTO socioDTO) {
+        final Socio socio = new Socio(socioDTO);
+        socioDB.put(socioDTO.getId(), socio);
+        socioLogueado = socio;
     }
 }

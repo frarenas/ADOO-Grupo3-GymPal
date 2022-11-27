@@ -1,4 +1,4 @@
-package ar.edu.uade.model.socio;
+package ar.edu.uade.enums;
 
 public enum SexoBiologico {
 	MASCULINO, FEMENINO;

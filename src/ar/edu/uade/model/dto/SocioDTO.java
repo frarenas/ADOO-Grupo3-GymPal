@@ -1,6 +1,6 @@
 package ar.edu.uade.model.dto;
 
-import ar.edu.uade.model.socio.SexoBiologico;
+import ar.edu.uade.enums.SexoBiologico;
 import ar.edu.uade.model.socio.Socio;
 
 import java.util.List;

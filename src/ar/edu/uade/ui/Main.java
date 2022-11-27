@@ -1,10 +1,8 @@
 package ar.edu.uade.ui;
 
 import ar.edu.uade.controller.SocioController;
-import ar.edu.uade.model.socio.SexoBiologico;
+import ar.edu.uade.enums.SexoBiologico;
 import ar.edu.uade.model.socio.Socio;
-
-import java.util.Date;
 
 public class Main {
 

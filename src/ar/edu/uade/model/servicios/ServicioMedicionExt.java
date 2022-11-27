@@ -1,7 +1,7 @@
 package ar.edu.uade.model.servicios;
 
 import ar.edu.uade.abstractions.IAdapterMedicion;
-import ar.edu.uade.model.socio.SexoBiologico;
+import ar.edu.uade.enums.SexoBiologico;
 
 public class ServicioMedicionExt implements IAdapterMedicion {
 	
