@@ -56,6 +56,7 @@ public class Menu {
 
     private void mostrarPantalla(JPanel panel) {
         rootFrame.setContentPane(panel);
+        rootFrame.setVisible(true);
     }
 
     private void login() {
