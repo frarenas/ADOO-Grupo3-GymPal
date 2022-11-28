@@ -1,9 +1,13 @@
-package ar.edu.uade.model.ejercicio;
+package ar.edu.uade.model.dto;
 
 import ar.edu.uade.enums.ExigenciaMuscular;
 import ar.edu.uade.enums.GrupoMuscular;
+import ar.edu.uade.model.ejercicio.Ejercicio;
 
-public class Ejercicio {
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class EjercicioDTO {
 
 	private Long id;
 	private String nombre;
@@ -16,8 +20,7 @@ public class Ejercicio {
 	private String urlVideoMuestra;
 	private double refuerzo;
 
-
-	public Ejercicio(Long id, String nombre, GrupoMuscular grupoMuscular, int series, int repeticiones, double carga, int nivelAerobico, ExigenciaMuscular exigenciaMuscular, String urlVideoMuestra, double refuerzo) {
+	public EjercicioDTO(Long id, String nombre, GrupoMuscular grupoMuscular, int series, int repeticiones, double carga, int nivelAerobico, ExigenciaMuscular exigenciaMuscular, String urlVideoMuestra, double refuerzo) {
 		this.id = id;
 		this.nombre = nombre;
 		this.grupoMuscular = grupoMuscular;
@@ -32,6 +35,7 @@ public class Ejercicio {
 
 	//GETTERS & SETTERS
 
+
 	public Long getId() {
 		return id;
 	}
@@ -39,6 +43,7 @@ public class Ejercicio {
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -109,5 +114,24 @@ public class Ejercicio {
 
 	public void setRefuerzo(Double refuerzo) {
 		this.refuerzo = refuerzo;
+	}
+
+	public static EjercicioDTO fromEntity(Ejercicio ejercicio) {
+		return new EjercicioDTO(
+				ejercicio.getId(),
+				ejercicio.getNombre(),
+				ejercicio.getGrupoMuscular(),
+				ejercicio.getSeries(),
+				ejercicio.getRepeticiones(),
+				ejercicio.getCarga(),
+				ejercicio.getNivelAerobico(),
+				ejercicio.getExigenciaMuscular(),
+				ejercicio.getUrlVideoMuestra(),
+				ejercicio.getRefuerzo()
+		);
+	}
+
+	public static List<EjercicioDTO> fromEntities(List<Ejercicio> ejercicios) {
+		return ejercicios.stream().map(EjercicioDTO::fromEntity).collect(Collectors.toList());
 	}
 }
