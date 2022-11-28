@@ -9,7 +9,11 @@ public abstract class Objetivo {
 
 	public abstract boolean objetivoCumplido();
 
-	public abstract Rutina crearRutina();
+	public abstract void crearRutina();
 
 	public abstract NotificacionPush sugerirObjetivo();
+
+	public Rutina getRutina() {
+		return rutina;
+	}
 }
