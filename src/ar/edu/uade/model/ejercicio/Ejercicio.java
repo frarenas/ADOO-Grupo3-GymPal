@@ -14,10 +14,11 @@ public class Ejercicio {
 	private int nivelAerobico;
 	private ExigenciaMuscular exigenciaMuscular;
 	private String urlVideoMuestra;
-	private double refuerzo;
 
 
-	public Ejercicio(Long id, String nombre, GrupoMuscular grupoMuscular, int series, int repeticiones, double carga, int nivelAerobico, ExigenciaMuscular exigenciaMuscular, String urlVideoMuestra, double refuerzo) {
+
+
+	public Ejercicio(Long id, String nombre, GrupoMuscular grupoMuscular, int series, int repeticiones, double carga, int nivelAerobico, ExigenciaMuscular exigenciaMuscular, String urlVideoMuestra) {
 		this.id = id;
 		this.nombre = nombre;
 		this.grupoMuscular = grupoMuscular;
@@ -27,7 +28,7 @@ public class Ejercicio {
 		this.nivelAerobico = nivelAerobico;
 		this.exigenciaMuscular = exigenciaMuscular;
 		this.urlVideoMuestra = urlVideoMuestra;
-		this.refuerzo = refuerzo;
+
 	}
 
 	//GETTERS & SETTERS
@@ -103,11 +104,4 @@ public class Ejercicio {
 		this.urlVideoMuestra = urlVideoMuestra;
 	}
 
-	public double getRefuerzo() {
-		return refuerzo;
-	}
-
-	public void setRefuerzo(Double refuerzo) {
-		this.refuerzo = refuerzo;
-	}
 }

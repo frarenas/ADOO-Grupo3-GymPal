@@ -7,8 +7,5 @@ public class TrofeoDedicacion extends Trofeo {
 
     private Objetivo ojetivoObservado;
 
-    @Override
-    public void generarTrofeo(Socio socio) {
 
-    }
 }

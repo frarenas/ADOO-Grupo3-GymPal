@@ -16,13 +16,8 @@ public class Medicion {
 		this.altura = altura;
 		this.peso = peso;
 	}
-	
-	public void obtenerGrasaCorporal() {
-		adapterMedicion.obtenerGrasaCorporal(peso, altura, null, 0);
-	}
-	
-	public void obtenerMasaMuscular() {
-		adapterMedicion.obtenerMasaMuscular(peso, altura, null, 0);
-	}
+
+	public double getAltura(){return altura;}
+	public double getPeso(){return peso;}
 
 }

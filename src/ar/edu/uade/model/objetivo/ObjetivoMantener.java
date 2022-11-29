@@ -1,5 +1,7 @@
 package ar.edu.uade.model.objetivo;
 
+import ar.edu.uade.enums.ExigenciaMuscular;
+import ar.edu.uade.model.Medicion;
 import ar.edu.uade.model.NotificacionPush;
 import ar.edu.uade.model.Rutina;
 
@@ -9,13 +11,13 @@ public class ObjetivoMantener extends Objetivo{
     private Integer NUnidades;
 
     @Override
-    public boolean objetivoCumplido() {
+    public boolean objetivoCumplido(Medicion medicion) {
         return false;
     }
 
     @Override
-    public Rutina crearRutina() {
-        return null;
+    public void crearRutina() {
+        super.getRutina().crearRutina(ExigenciaMuscular.BAJO, 2, 4);
     }
 
     @Override
