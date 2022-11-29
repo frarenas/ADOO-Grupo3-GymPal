@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Rutina {
 
-	private final int duracionSemanas = 4;
+	//private final int duracionSemanas = 4;
 	private List<Entrenamiento> entrenamientos = new LinkedList<Entrenamiento>();
 
 	public Rutina(List<Entrenamiento> entrenamientos) {
@@ -15,7 +15,13 @@ public class Rutina {
 	}
 
 	public Rutina crearRutina(ExigenciaMuscular nivelExigencia, int nivelAerobicoMin, int nivelAerobicoMax){
-		return null;
+
+		for(int i =0; i<5; i++){
+			Entrenamiento entrenamiento = new Entrenamiento();
+			entrenamiento.crearEntrenamiento(nivelExigencia, nivelAerobicoMin, nivelAerobicoMax);
+			this.entrenamientos.add(entrenamiento);
+		}
+		return this;
 
 	}
 	public void reforzar(){
