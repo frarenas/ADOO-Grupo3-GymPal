@@ -3,11 +3,14 @@ package ar.edu.uade.model.ejercicio;
 import ar.edu.uade.enums.ExigenciaMuscular;
 import ar.edu.uade.enums.GrupoMuscular;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class TotalEjercicios {
 
-    private List<Ejercicio> totalEjercicios;
+    public TotalEjercicios(){this.cargarEjercicios();}
+
+    private List<Ejercicio> totalEjercicios = new LinkedList<Ejercicio>();
 
 
     public List<Ejercicio> getTotalEjercicios() {
