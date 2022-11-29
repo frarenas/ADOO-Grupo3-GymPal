@@ -1,5 +1,6 @@
 package ar.edu.uade.model.objetivo;
 
+import ar.edu.uade.enums.ExigenciaMuscular;
 import ar.edu.uade.model.NotificacionPush;
 import ar.edu.uade.model.Rutina;
 
@@ -15,8 +16,8 @@ public class ObjetivoTonificar extends Objetivo{
     }
 
     @Override
-    public Rutina crearRutina() {
-        return null;
+    public void crearRutina() {
+        super.getRutina().crearRutina(ExigenciaMuscular.ALTO, 1, 4);
     }
 
     @Override

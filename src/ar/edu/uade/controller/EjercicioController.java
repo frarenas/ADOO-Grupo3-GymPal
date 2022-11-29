@@ -31,8 +31,7 @@ public class EjercicioController {
             double carga,
             int nivelAerobico,
             ExigenciaMuscular exigenciaMuscular,
-            String urlVideoMuestra,
-            double refuerzo
+            String urlVideoMuestra
     ) {
         Ejercicio ejercicio = new Ejercicio(
                 id,
@@ -43,8 +42,7 @@ public class EjercicioController {
                 carga,
                 nivelAerobico,
                 exigenciaMuscular,
-                urlVideoMuestra,
-                refuerzo
+                urlVideoMuestra
         );
         ejercicioDB.put(id, ejercicio);
         return EjercicioDTO.fromEntity(ejercicio);
@@ -62,8 +60,7 @@ public class EjercicioController {
                 ejercicioDTO.getCarga(),
                 ejercicioDTO.getNivelAerobico(),
                 ejercicioDTO.getExigenciaMuscular(),
-                ejercicioDTO.getUrlVideoMuestra(),
-                ejercicioDTO.getRefuerzo()
+                ejercicioDTO.getUrlVideoMuestra()
         );
     }
 
@@ -76,8 +73,7 @@ public class EjercicioController {
             double carga,
             int nivelAerobico,
             ExigenciaMuscular exigenciaMuscular,
-            String urlVideoMuestra,
-            double refuerzo
+            String urlVideoMuestra
     ) {
         Ejercicio ejercicio = ejercicioDB.get(id);
         ejercicio.setNombre(nombre);
@@ -88,7 +84,7 @@ public class EjercicioController {
         ejercicio.setNivelAerobico(nivelAerobico);
         ejercicio.setExigenciaMuscular(exigenciaMuscular);
         ejercicio.setUrlVideoMuestra(urlVideoMuestra);
-        ejercicio.setRefuerzo(refuerzo);
+
 
         ejercicioDB.put(id, ejercicio);
     }
@@ -105,8 +101,7 @@ public class EjercicioController {
                 ejercicioDTO.getCarga(),
                 ejercicioDTO.getNivelAerobico(),
                 ejercicioDTO.getExigenciaMuscular(),
-                ejercicioDTO.getUrlVideoMuestra(),
-                ejercicioDTO.getRefuerzo()
+                ejercicioDTO.getUrlVideoMuestra()
         );
     }
 
