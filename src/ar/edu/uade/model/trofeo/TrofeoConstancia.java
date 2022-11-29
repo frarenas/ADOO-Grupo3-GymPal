@@ -7,8 +7,4 @@ public class TrofeoConstancia extends Trofeo{
 
     private Rutina rutinaObservado;
 
-    @Override
-    public void generarTrofeo(Socio socio) {
-
-    }
 }

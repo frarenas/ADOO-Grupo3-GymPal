@@ -9,6 +9,7 @@ import ar.edu.uade.model.servicios.ServicioMedicionExt;
 import ar.edu.uade.model.trofeo.Trofeo;
 import ar.edu.uade.model.dto.SocioDTO;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class Socio {
@@ -24,7 +25,7 @@ public class Socio {
 	private List<Medicion> mediciones = null;
 	private List<Objetivo> historialObjetivos = null;
 	private IAdapterMedicion adapterMedicion = new ServicioMedicionExt();
-	private List<Trofeo> trofeosGanados = null;
+	private List<Trofeo> trofeosGanados = new LinkedList<>();
 
 	public Socio(Long id, String nombre, String documento, int edad, SexoBiologico sexo, String email, double altura, double peso) {
 		this.id = id;
@@ -94,6 +95,9 @@ public class Socio {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public void addTrofeo(Trofeo trofeo){
+		this.trofeosGanados.add(trofeo);
 	}
 }
 
