@@ -26,7 +26,7 @@ public class Entrenamiento {
 
 		//por cada grupo muscular agrega un ejercicio. el entrenamiento estará compuesto de 5 ejercicios
 		for(GrupoMuscular musculo : GrupoMuscular.values()){
-			for(int i =0; i<5; i++){
+			for(int i =0; i<totalEjercicios.getTotalEjercicios().size(); i++){
 				Ejercicio ej = totalEjercicios.getTotalEjercicios().get(i);
 				if(ej.getGrupoMuscular() == musculo){
 					if (nivelExigencia == ej.getExigenciaMuscular()){
