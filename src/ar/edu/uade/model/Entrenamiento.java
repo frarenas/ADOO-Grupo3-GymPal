@@ -11,13 +11,9 @@ public class Entrenamiento {
 	
 	private List<Ejercicio> ejercicios;
 	private double duracion;
-	
-
-	
 
 	public Entrenamiento() {
 	}
-
 
 	public List<Ejercicio> getEjercicios() {
 		return ejercicios;
@@ -44,8 +40,11 @@ public class Entrenamiento {
 		return this;
 
 	}
+	//Para cada ejercicio del Entrenamiento se aumenta la carga un 5%
 	public void reforzar(){
-		throw new UnsupportedOperationException();
+		for (Ejercicio e:ejercicios){
+			e.setCarga(e.getCarga()*1.05);
+		}
 	}
 
 
