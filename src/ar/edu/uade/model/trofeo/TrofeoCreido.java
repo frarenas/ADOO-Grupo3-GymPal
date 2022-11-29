@@ -7,4 +7,8 @@ public class TrofeoCreido extends Trofeo{
     private Socio socioObservado;
 
 
+    @Override
+    public void generarTrofeo(Socio socio) {
+
+    }
 }
