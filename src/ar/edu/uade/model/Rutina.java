@@ -8,9 +8,9 @@ import java.util.List;
 public class Rutina {
 
 	private int duracionSemanas = 0;
-	private List<Entrenamiento> entrenamientos;
+	private List<Entrenamiento> entrenamientos = new LinkedList<>();
 
-	public Rutina(List<Entrenamiento> entrenamientos) {
+	public Rutina() {
 		this.entrenamientos = entrenamientos;
 	}
 
@@ -23,9 +23,9 @@ public class Rutina {
 		}
 	}
 	public void reforzar(){
-		Entrenamiento entrenamientoReforzado = this.entrenamientos.get(entrenamientos.size()-1);
+		Entrenamiento entrenamientoReforzado = this.entrenamientos.get(duracionSemanas);
 		entrenamientoReforzado.reforzar();
-		entrenamientos.set(entrenamientos.size() - 1, entrenamientoReforzado);
+		entrenamientos.set(duracionSemanas, entrenamientoReforzado);
 	}
 	public void simularSemana(){
 		if (duracionSemanas<4)
@@ -36,6 +36,9 @@ public class Rutina {
 	}
 	public Entrenamiento getEntrenamientos(int semana){
 		return this.entrenamientos.get(semana);
+	}
+	public List<Entrenamiento> getEntrenamientos(){
+		return this.entrenamientos;
 	}
 	public int getDuracionSemanas() { return duracionSemanas; }
 

@@ -23,7 +23,7 @@ public class Socio {
 	private double peso;
 	private Objetivo objetivo = null;
 	private List<Medicion> mediciones = null;
-	private List<Objetivo> historialObjetivos = null;
+	private List<Objetivo> historialObjetivos = new LinkedList<Objetivo>();
 	private IAdapterMedicion adapterMedicion = new ServicioMedicionExt();
 	private List<Trofeo> trofeosGanados = new LinkedList<>();
 
