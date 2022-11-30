@@ -1,7 +1,6 @@
 package ar.edu.uade.model.objetivo;
 
 import ar.edu.uade.abstractions.IAdapterMedicion;
-import ar.edu.uade.model.NotificacionPush;
 import ar.edu.uade.model.Rutina;
 import ar.edu.uade.model.servicios.ServicioMedicionExt;
 
@@ -15,7 +14,7 @@ public abstract class Objetivo {
 
 	public abstract void crearRutina();
 
-	public abstract NotificacionPush sugerirObjetivo();
+	public abstract void sugerirObjetivo();
 
 	public Rutina getRutina() {
 		return rutina;

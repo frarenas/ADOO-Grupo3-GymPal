@@ -1,7 +1,9 @@
 package ar.edu.uade.model.objetivo;
 
+import ar.edu.uade.abstractions.IAdapterNotificacionPush;
 import ar.edu.uade.enums.ExigenciaMuscular;
-import ar.edu.uade.model.NotificacionPush;
+import ar.edu.uade.model.AdapterFirebase;
+import ar.edu.uade.model.Notificacion;
 
 public class ObjetivoTonificar extends Objetivo{
 
@@ -21,7 +23,13 @@ public class ObjetivoTonificar extends Objetivo{
     }
 
     @Override
-    public NotificacionPush sugerirObjetivo() {
-        return null;
+    public void sugerirObjetivo() {
+        if(super.cumplido){
+            IAdapterNotificacionPush not = new AdapterFirebase();
+            Notificacion mensaje = new Notificacion();
+            mensaje.setMensaje("Se sugiere Objetivo 'Mantener figura'");
+            not.enviar(mensaje);
+        }
+
     }
 }

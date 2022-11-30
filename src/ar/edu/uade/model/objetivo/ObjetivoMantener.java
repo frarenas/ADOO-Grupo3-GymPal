@@ -1,7 +1,6 @@
 package ar.edu.uade.model.objetivo;
 
 import ar.edu.uade.enums.ExigenciaMuscular;
-import ar.edu.uade.model.NotificacionPush;
 
 public class ObjetivoMantener extends Objetivo{
 
@@ -22,7 +21,7 @@ public class ObjetivoMantener extends Objetivo{
     }
 
     @Override
-    public NotificacionPush sugerirObjetivo() {
-        return null;
+    public void sugerirObjetivo() {
+
     }
 }
