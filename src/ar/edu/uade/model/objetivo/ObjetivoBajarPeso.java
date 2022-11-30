@@ -27,9 +27,4 @@ public class ObjetivoBajarPeso extends Objetivo{
         }
 
     }
-
-    ;
-
-
-
 }

@@ -1,10 +1,12 @@
 package ar.edu.uade.model.objetivo;
 
 import ar.edu.uade.abstractions.IAdapterMedicion;
+import ar.edu.uade.abstractions.IObserver;
+import ar.edu.uade.controller.SocioController;
 import ar.edu.uade.model.Rutina;
 import ar.edu.uade.model.servicios.ServicioMedicionExt;
 
-public abstract class Objetivo {
+public abstract class Objetivo implements IObserver {
 	
 	private Rutina rutina = new Rutina();
 	boolean cumplido;
@@ -22,5 +24,10 @@ public abstract class Objetivo {
 
 	public boolean isCumplido() {
 		return cumplido;
+	}
+
+	@Override
+	public void notificar() {
+		sugerirObjetivo();
 	}
 }

@@ -19,6 +19,4 @@ public class TrofeoDedicacion extends Trofeo {
         not.enviar(mensaje);
         socio.addTrofeo(this);
     }
-
-
 }

@@ -57,8 +57,8 @@ public class EditarSocioUI {
                 showMessageDialog(null, "Debe completar todos los campos para continuar");
 
             } else {
-                Double altura = Double.parseDouble(txtAltura.getText());
-                Double peso = Double.parseDouble(txtPeso.getText());
+                double altura = Double.parseDouble(txtAltura.getText());
+                double peso = Double.parseDouble(txtPeso.getText());
                 Medicion medicion = new Medicion(new Date(), altura, peso);
                 socioGuardado.getMediciones().add(medicion);
 
