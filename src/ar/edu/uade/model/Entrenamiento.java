@@ -48,7 +48,9 @@ public class Entrenamiento {
 	//Para cada ejercicio del Entrenamiento se aumenta la carga un 5%
 	public void reforzar(){
 		for (Ejercicio e:ejercicios){
-			e.setCarga(e.getCarga()*1.05);
+			if(e.getGrupoMuscular().equals(GrupoMuscular.BRAZOS) || e.getGrupoMuscular().equals(GrupoMuscular.HOMBROS))
+				e.setCarga(e.getCarga()+2.5);
+			else e.setCarga(e.getCarga()+5);
 		}
 	}
 
