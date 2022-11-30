@@ -1,6 +1,7 @@
 package ar.edu.uade.model.dto;
 
 import ar.edu.uade.enums.SexoBiologico;
+import ar.edu.uade.model.Medicion;
 import ar.edu.uade.model.socio.Socio;
 
 import java.util.List;
@@ -8,23 +9,21 @@ import java.util.stream.Collectors;
 
 public class SocioDTO {
     private Long id;
-    public String nombre;
-    public String documento;
-    public int edad;
-    public SexoBiologico sexo;
-    public String email;
-    public double altura;
-    public double peso;
+    private String nombre;
+    private String documento;
+    private int edad;
+    private SexoBiologico sexo;
+    private String email;
+    private List<Medicion> mediciones;
 
-    public SocioDTO(Long id, String nombre, String documento, int edad, SexoBiologico sexo, String email, double altura, double peso) {
+    public SocioDTO(Long id, String nombre, String documento, int edad, SexoBiologico sexo, String email, List<Medicion> mediciones) {
         this.id = id;
         this.nombre = nombre;
         this.documento = documento;
         this.edad = edad;
         this.sexo = sexo;
         this.email = email;
-        this.altura = altura;
-        this.peso = peso;
+        this.mediciones = mediciones;
     }
 
     public Long getId() {
@@ -75,20 +74,12 @@ public class SocioDTO {
         this.email = email;
     }
 
-    public double getAltura() {
-        return altura;
+    public List<Medicion> getMediciones() {
+        return mediciones;
     }
 
-    public void setAltura(double altura) {
-        this.altura = altura;
-    }
-
-    public double getPeso() {
-        return peso;
-    }
-
-    public void setPeso(double peso) {
-        this.peso = peso;
+    public void setMediciones(List<Medicion> mediciones) {
+        this.mediciones = mediciones;
     }
 
     public static SocioDTO fromEntity(Socio socio) {
@@ -99,8 +90,7 @@ public class SocioDTO {
                 socio.getEdad(),
                 socio.getSexo(),
                 socio.getEmail(),
-                socio.getAltura(),
-                socio.getPeso()
+                socio.getMediciones()
         );
     }
 

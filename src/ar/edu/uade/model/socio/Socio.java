@@ -19,35 +19,31 @@ public class Socio {
 	private int edad;
 	private SexoBiologico sexo;
 	private String email;
-	private double altura;
-	private double peso;
 	private Objetivo objetivo = null;
 	private List<Medicion> mediciones = null;
 	private List<Objetivo> historialObjetivos = new LinkedList<Objetivo>();
 	private IAdapterMedicion adapterMedicion = new ServicioMedicionExt();
 	private List<Trofeo> trofeosGanados = new LinkedList<>();
 
-	public Socio(Long id, String nombre, String documento, int edad, SexoBiologico sexo, String email, double altura, double peso) {
+	public Socio(Long id, String nombre, String documento, int edad, SexoBiologico sexo, String email, List<Medicion> mediciones) {
 		this.id = id;
 		this.nombre = nombre;
 		this.documento = documento;
 		this.edad = edad;
 		this.sexo = sexo;
 		this.email = email;
-		this.altura = altura;
-		this.peso = peso;
+		this.mediciones = mediciones;
 	}
 
 	//RegistrarSocio()
 	public Socio(SocioDTO socio){
 		this.id = socio.getId();
-		this.nombre = socio.nombre;
-		this.documento = socio.documento;
-		this.edad = socio.edad;
-		this.sexo = socio.sexo;
-		this.email = socio.email;
-		this.altura = socio.altura;
-		this.peso = socio.peso;
+		this.nombre = socio.getNombre();
+		this.documento = socio.getDocumento();
+		this.edad = socio.getEdad();
+		this.sexo = socio.getSexo();
+		this.email = socio.getEmail();
+		this.mediciones = socio.getMediciones();
 	}
 	public void elegirObjetivo(Objetivo objetivo) {
 		this.objetivo = objetivo;
@@ -62,9 +58,6 @@ public class Socio {
 		this.id = id;
 	}
 
-	public void actualizarPeso(double peso) {
-		this.peso = peso;
-	}
 	public String getNombre() {
 		return nombre;
 	}
@@ -79,12 +72,6 @@ public class Socio {
 	}
 	public String getEmail() {
 		return email;
-	}
-	public double getAltura() {
-		return altura;
-	}
-	public double getPeso() {
-		return peso;
 	}
 	public Objetivo getObjetivo() {
 		return objetivo;
