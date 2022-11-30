@@ -2,6 +2,7 @@ package ar.edu.uade.ui;
 
 import ar.edu.uade.controller.*;
 import ar.edu.uade.model.dto.SocioDTO;
+import ar.edu.uade.ui.Rutina.RutinaUI;
 import ar.edu.uade.ui.ejercicio.EjercicioUI;
 import ar.edu.uade.ui.usuario.EditarSocioUI;
 
@@ -16,6 +17,7 @@ public class Menu {
 
     private JMenuItem mnuEjercicio;
     private JMenuItem mnuSocio;
+    private JMenuItem mnuRutina;
 
     public Menu() {
         rootFrame = new JFrame("GymPal");
@@ -38,12 +40,15 @@ public class Menu {
         JMenu mnuMenu = new JMenu("Menu");
         mnuSocio = new JMenuItem("Socio");
         mnuEjercicio = new JMenuItem("Ejercicios");
+        mnuRutina = new JMenuItem("Rutina");
 
         mnuSocio.addActionListener(e -> mostrarPantalla(new EditarSocioUI(SocioController.getInstance(), SocioDTO.fromEntity(SocioController.socioLogueado)).pnlPrincipal));
         mnuEjercicio.addActionListener(e -> mostrarPantalla(new EjercicioUI(EjercicioController.getInstance()).pnlPrincipal));
+        mnuRutina.addActionListener(e -> mostrarPantalla(new RutinaUI(RutinaController.getInstance()).pnlPrincipal));
 
         mnuMenu.add(mnuSocio);
         mnuMenu.add(mnuEjercicio);
+        mnuMenu.add(mnuRutina);
 
         mb.add(mnuMenu);
 
