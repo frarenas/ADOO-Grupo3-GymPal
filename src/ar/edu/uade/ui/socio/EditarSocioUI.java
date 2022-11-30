@@ -1,9 +1,13 @@
-package ar.edu.uade.ui.usuario;
+package ar.edu.uade.ui.socio;
 
 import ar.edu.uade.controller.SocioController;
+import ar.edu.uade.model.Medicion;
 import ar.edu.uade.model.dto.SocioDTO;
 
 import javax.swing.*;
+
+import java.util.Comparator;
+import java.util.Date;
 
 import static ar.edu.uade.enums.Objetivo.*;
 import static javax.swing.JOptionPane.showMessageDialog;
@@ -36,9 +40,10 @@ public class EditarSocioUI {
     }
 
     private void completarFormulario(SocioDTO socio) {
+        Medicion ultimaMedicion = socio.getMediciones().stream().max(Comparator.comparing(Medicion::getFecha)).orElse(null);
         txtEdad.setText(String.valueOf(socio.getEdad()));
-        txtAltura.setText(String.valueOf(socio.getAltura()));
-        txtPeso.setText(String.valueOf(socio.getPeso()));
+        txtAltura.setText(ultimaMedicion != null ? String.valueOf(ultimaMedicion.getAltura()) : "");
+        txtPeso.setText(ultimaMedicion != null ? String.valueOf(ultimaMedicion.getPeso()) : "");
     }
 
     private void guardarUsuario() {
@@ -52,9 +57,10 @@ public class EditarSocioUI {
                 showMessageDialog(null, "Debe completar todos los campos para continuar");
 
             } else {
-                socioGuardado.edad = Integer.parseInt(txtEdad.getText());
-                socioGuardado.altura = Double.parseDouble(txtAltura.getText());
-                socioGuardado.peso = Double.parseDouble(txtPeso.getText());
+                Double altura = Double.parseDouble(txtAltura.getText());
+                Double peso = Double.parseDouble(txtPeso.getText());
+                Medicion medicion = new Medicion(new Date(), altura, peso);
+                socioGuardado.getMediciones().add(medicion);
 
                 socioController.guardarSocio(socioGuardado);
             }

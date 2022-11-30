@@ -12,11 +12,16 @@ public class Medicion {
 	private double peso;
 	
 	public Medicion(double altura, double peso) {
-		this.fecha = new Date();
+		new Medicion(new Date(), altura, peso);
+	}
+
+	public Medicion(Date fecha, double altura, double peso) {
+		this.fecha = fecha;
 		this.altura = altura;
 		this.peso = peso;
 	}
 
+	public Date getFecha(){return fecha;}
 	public double getAltura(){return altura;}
 	public double getPeso(){return peso;}
 
