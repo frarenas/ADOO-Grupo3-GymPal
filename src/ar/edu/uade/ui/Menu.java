@@ -2,7 +2,7 @@ package ar.edu.uade.ui;
 
 import ar.edu.uade.controller.*;
 import ar.edu.uade.model.dto.SocioDTO;
-import ar.edu.uade.ui.Rutina.RutinaUI;
+import ar.edu.uade.ui.Rutina.EntrenamientoUI;
 import ar.edu.uade.ui.ejercicio.EjercicioUI;
 import ar.edu.uade.ui.usuario.EditarSocioUI;
 
@@ -44,7 +44,7 @@ public class Menu {
 
         mnuSocio.addActionListener(e -> mostrarPantalla(new EditarSocioUI(SocioController.getInstance(), SocioDTO.fromEntity(SocioController.socioLogueado)).pnlPrincipal));
         mnuEjercicio.addActionListener(e -> mostrarPantalla(new EjercicioUI(EjercicioController.getInstance()).pnlPrincipal));
-        mnuRutina.addActionListener(e -> mostrarPantalla(new RutinaUI(RutinaController.getInstance()).pnlPrincipal));
+        mnuRutina.addActionListener(e -> mostrarPantalla(new EntrenamientoUI(SocioController.getInstance()).pnlPrincipal));
 
         mnuMenu.add(mnuSocio);
         mnuMenu.add(mnuEjercicio);

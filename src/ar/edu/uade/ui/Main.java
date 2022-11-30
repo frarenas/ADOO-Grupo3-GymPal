@@ -1,9 +1,7 @@
 package ar.edu.uade.ui;
 
 import ar.edu.uade.controller.EjercicioController;
-import ar.edu.uade.controller.RutinaController;
 import ar.edu.uade.controller.SocioController;
-import ar.edu.uade.enums.Objetivo;
 import ar.edu.uade.enums.SexoBiologico;
 import ar.edu.uade.model.ejercicio.Ejercicio;
 import ar.edu.uade.model.ejercicio.TotalEjercicios;
@@ -36,11 +34,6 @@ public class Main {
 		objetivoSocio2.crearRutina();
 		socio3.elegirObjetivo(objetivoSocio3);
 		objetivoSocio3.crearRutina();
-
-
-
-
-
 
 
 		//Mock de Objetos

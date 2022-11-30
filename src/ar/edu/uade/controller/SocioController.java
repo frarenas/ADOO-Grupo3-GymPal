@@ -1,6 +1,8 @@
 package ar.edu.uade.controller;
 
+import ar.edu.uade.model.Entrenamiento;
 import ar.edu.uade.model.ResultadoOperacion;
+import ar.edu.uade.model.Rutina;
 import ar.edu.uade.model.dto.SocioDTO;
 import ar.edu.uade.model.socio.Socio;
 
@@ -48,4 +50,21 @@ public class SocioController {
         }*/
 
     }
+
+    // Rutina y Objetivos
+
+    //getEntrenamiento() --> Devuelve el Entrenamiento correspondiente a la semaana actual de la rutina
+    public Entrenamiento getEntrenamiento() {
+        Rutina rutinaSocio = socioLogueado.getObjetivo().getRutina();
+        return rutinaSocio.getEntrenamientos(rutinaSocio.getSemanaDeEntrenamiento());
+    }
+
+    public void simularSemana(){
+        socioLogueado.getObjetivo().getRutina().simularSemana();
+    }
+    public void reforzarEntrenamiento() {
+        socioLogueado.getObjetivo().getRutina().reforzar();
+    }
+
+
 }
