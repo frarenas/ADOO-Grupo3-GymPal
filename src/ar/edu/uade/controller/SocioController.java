@@ -39,8 +39,13 @@ public class SocioController {
     }
 
     public void guardarSocio(SocioDTO socioDTO) {
-        final Socio socio = new Socio(socioDTO);
-        socioDB.put(socioDTO.getId(), socio);
-        socioLogueado = socio;
+        if (!socioLogueado.getNombre().equals(socioDTO.getNombre())){
+            final Socio socio = new Socio(socioDTO);
+            socioDB.put(socioDTO.getId(), socio);
+            socioLogueado = socio;
+        } /*else {
+            //Codigo a rellenar, la idea es actualizar el objetivo elegido
+        }*/
+
     }
 }
