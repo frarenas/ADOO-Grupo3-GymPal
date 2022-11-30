@@ -4,6 +4,7 @@ import ar.edu.uade.controller.*;
 import ar.edu.uade.model.dto.SocioDTO;
 import ar.edu.uade.ui.Entrenamiento.EntrenamientoUI;
 import ar.edu.uade.ui.ejercicio.EjercicioUI;
+import ar.edu.uade.ui.objetivo.ObjetivoUI;
 import ar.edu.uade.ui.socio.EditarSocioUI;
 
 import javax.swing.*;
