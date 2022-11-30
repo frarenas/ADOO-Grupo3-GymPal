@@ -25,11 +25,11 @@ public class TotalEjercicios {
         totalEjercicios.add(ej11);
 
         Ejercicio ej12 = new Ejercicio(12L,"Banco inclinado", GrupoMuscular.PECHO, 3, 8,
-                10,2,ExigenciaMuscular.ALTO,"");
+                10,1,ExigenciaMuscular.ALTO,"");
         totalEjercicios.add(ej12);
 
         Ejercicio ej13 = new Ejercicio(13L,"Banco declinado", GrupoMuscular.PECHO, 3, 10,
-                15,2,ExigenciaMuscular.ALTO,"");
+                15,3,ExigenciaMuscular.ALTO,"");
         totalEjercicios.add(ej13);
 
         Ejercicio ej14 = new Ejercicio(14L,"Flexion pecho", GrupoMuscular.PECHO, 3, 5,
@@ -39,6 +39,18 @@ public class TotalEjercicios {
         Ejercicio ej15 = new Ejercicio(15L,"Burpees", GrupoMuscular.PECHO, 3, 10,
                 0,10,ExigenciaMuscular.BAJO,"");
         totalEjercicios.add(ej15);
+
+        Ejercicio ej16 = new Ejercicio(16L,"Flexion con rodilla", GrupoMuscular.PECHO, 3, 15,
+                0,8,ExigenciaMuscular.BAJO,"");
+        totalEjercicios.add(ej16);
+
+        Ejercicio ej17 = new Ejercicio(17L,"Fondos en paralela", GrupoMuscular.PECHO, 3, 8,
+                0,7,ExigenciaMuscular.MEDIO,"");
+        totalEjercicios.add(ej17);
+
+        Ejercicio ej18 = new Ejercicio(18L,"Butterfly Press", GrupoMuscular.PECHO, 3, 12,
+                0,4,ExigenciaMuscular.MEDIO,"");
+        totalEjercicios.add(ej18);
 
         //-----------------------------------------------------------------------
 

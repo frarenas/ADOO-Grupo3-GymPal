@@ -19,8 +19,4 @@ public abstract class Objetivo {
 	public Rutina getRutina() {
 		return rutina;
 	}
-
-	public boolean isCumplido() {
-		return cumplido;
-	}
 }
