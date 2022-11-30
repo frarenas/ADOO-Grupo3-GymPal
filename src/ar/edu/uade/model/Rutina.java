@@ -18,7 +18,7 @@ public class Rutina {
 
 		for(int i =0; i<5; i++){
 			Entrenamiento entrenamiento = new Entrenamiento();
-			entrenamiento.crearEntrenamiento(nivelExigencia, nivelAerobicoMin, nivelAerobicoMax);
+			entrenamiento.crearEntrenamiento(nivelExigencia, nivelAerobicoMin, nivelAerobicoMax, duracionEntrenamiento);
 			this.entrenamientos.add(entrenamiento);
 		}
 	}
