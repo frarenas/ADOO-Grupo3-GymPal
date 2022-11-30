@@ -6,7 +6,7 @@ import ar.edu.uade.model.servicios.ServicioMedicionExt;
 
 public abstract class Objetivo {
 	
-	private Rutina rutina;
+	private Rutina rutina = new Rutina();
 	boolean cumplido;
 	IAdapterMedicion adapterMedicion = new ServicioMedicionExt();
 

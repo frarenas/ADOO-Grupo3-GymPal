@@ -6,11 +6,12 @@ import ar.edu.uade.model.dto.EjercicioDTO;
 import ar.edu.uade.model.ejercicio.Ejercicio;
 import ar.edu.uade.model.ejercicio.TotalEjercicios;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class Entrenamiento {
 	
-	private List<Ejercicio> ejercicios;
+	private List<Ejercicio> ejercicios = new LinkedList<>();
 	private String duracion;
 
 	public Entrenamiento() {

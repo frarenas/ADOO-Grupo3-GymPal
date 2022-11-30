@@ -2,6 +2,8 @@ package ar.edu.uade.model.objetivo;
 
 import ar.edu.uade.enums.ExigenciaMuscular;
 
+import static ar.edu.uade.enums.ExigenciaMuscular.BAJO;
+
 public class ObjetivoMantener extends Objetivo{
 
     private double pesoObjetivo;
@@ -17,7 +19,7 @@ public class ObjetivoMantener extends Objetivo{
 
     @Override
     public void crearRutina() {
-        super.getRutina().crearRutina(ExigenciaMuscular.BAJO, 2, 4, "Entre 45 min. a 1 hora y 20");
+        super.getRutina().crearRutina(BAJO, 2, 4, "Entre 45 min. a 1 hora y 20");
     }
 
     @Override
