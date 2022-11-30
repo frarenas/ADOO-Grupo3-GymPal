@@ -35,6 +35,7 @@ public class Entrenamiento {
 					if (nivelExigencia == ej.getExigenciaMuscular()){
 						if (ej.getNivelAerobico() >= nivelAerobicoMin && ej.getNivelAerobico() <= nivelAerobicoMax){
 							this.ejercicios.add(ej);
+							break;
 
 						}
 					}
@@ -45,7 +46,7 @@ public class Entrenamiento {
 		return this;
 
 	}
-	//Para cada ejercicio del Entrenamiento se aumenta la carga un 5%
+	//Para cada ejercicio del Entrenamiento se aumenta la carga en 2,5 o 5kg dependiendo el grupo muscular
 	public void reforzar(){
 		for (Ejercicio e:ejercicios){
 			if(e.getGrupoMuscular().equals(GrupoMuscular.BRAZOS) || e.getGrupoMuscular().equals(GrupoMuscular.HOMBROS))

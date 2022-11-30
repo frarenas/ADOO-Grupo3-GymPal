@@ -2,7 +2,6 @@ package ar.edu.uade.model.objetivo;
 
 import ar.edu.uade.abstractions.IAdapterMedicion;
 import ar.edu.uade.abstractions.IObserver;
-import ar.edu.uade.controller.SocioController;
 import ar.edu.uade.model.Rutina;
 import ar.edu.uade.model.servicios.ServicioMedicionExt;
 
