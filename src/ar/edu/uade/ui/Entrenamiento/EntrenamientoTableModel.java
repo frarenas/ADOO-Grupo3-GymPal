@@ -1,4 +1,4 @@
-package ar.edu.uade.ui.Rutina;
+package ar.edu.uade.ui.Entrenamiento;
 
 import ar.edu.uade.controller.SocioController;
 import ar.edu.uade.model.Entrenamiento;
