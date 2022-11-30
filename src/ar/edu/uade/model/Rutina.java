@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Rutina {
 
-	//private final int duracionSemanas = 4;
+	private final int duracionDias = 5;
 	private List<Entrenamiento> entrenamientos = new LinkedList<Entrenamiento>();
 
 	public Rutina(List<Entrenamiento> entrenamientos) {
