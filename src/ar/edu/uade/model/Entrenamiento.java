@@ -51,6 +51,7 @@ public class Entrenamiento {
 		}
 	}
 
-
-
+	public String getDuracion() {
+		return duracion;
+	}
 }

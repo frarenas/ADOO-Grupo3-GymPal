@@ -1,7 +1,6 @@
 package ar.edu.uade.model.objetivo;
 
 import ar.edu.uade.enums.ExigenciaMuscular;
-import ar.edu.uade.model.Medicion;
 import ar.edu.uade.model.NotificacionPush;
 
 public class ObjetivoTonificar extends Objetivo{
@@ -11,8 +10,9 @@ public class ObjetivoTonificar extends Objetivo{
 
 
     @Override
-    public boolean objetivoCumplido(Medicion medicion) {
-        return false;
+    public boolean objetivoCumplido() {
+        super.cumplido = adapterMedicion.obtenerGrasa() == grasaCorporalIdeal && masaMuscularIdeal == adapterMedicion.obtenerMusculo();
+        return super.cumplido;
     }
 
     @Override

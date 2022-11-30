@@ -1,17 +1,19 @@
 package ar.edu.uade.model.objetivo;
 
 import ar.edu.uade.enums.ExigenciaMuscular;
-import ar.edu.uade.model.Medicion;
 import ar.edu.uade.model.NotificacionPush;
 
 public class ObjetivoMantener extends Objetivo{
 
-    private double pesoActual;
-    private Integer NUnidades;
+    private double pesoObjetivo;
+    private Integer NUnidades = 3;
 
     @Override
-    public boolean objetivoCumplido(Medicion medicion) {
-        return false;
+    public boolean objetivoCumplido() {
+        super.cumplido = (adapterMedicion.obtenerPeso() >= pesoObjetivo - this.NUnidades) &&
+                (adapterMedicion.obtenerPeso()  <= pesoObjetivo+ this.NUnidades);
+        return super.cumplido;
+
     }
 
     @Override

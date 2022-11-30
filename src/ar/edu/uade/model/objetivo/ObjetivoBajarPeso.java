@@ -1,14 +1,14 @@
 package ar.edu.uade.model.objetivo;
 
 import ar.edu.uade.enums.ExigenciaMuscular;
-import ar.edu.uade.model.Medicion;
 import ar.edu.uade.model.NotificacionPush;
 
 public class ObjetivoBajarPeso extends Objetivo{
     private double pesoObjetivo;
 
-    public boolean objetivoCumplido(Medicion medicion){
-        return medicion.getPeso() == pesoObjetivo;
+    public boolean objetivoCumplido(){
+        super.cumplido = super.adapterMedicion.obtenerPeso() == pesoObjetivo;
+        return super.cumplido;
     }
 
     public void crearRutina() {
@@ -17,6 +17,9 @@ public class ObjetivoBajarPeso extends Objetivo{
     }
 
     public NotificacionPush sugerirObjetivo() {
+        if(super.cumplido){
+
+        }
         return null;
     }
 
