@@ -4,6 +4,7 @@ import ar.edu.uade.controller.*;
 import ar.edu.uade.model.dto.SocioDTO;
 import ar.edu.uade.ui.Entrenamiento.EntrenamientoUI;
 import ar.edu.uade.ui.ejercicio.EjercicioUI;
+import ar.edu.uade.ui.objetivo.ObjetivoUI;
 import ar.edu.uade.ui.usuario.EditarSocioUI;
 
 import javax.swing.*;
@@ -18,6 +19,7 @@ public class Menu {
     private JMenuItem mnuEjercicio;
     private JMenuItem mnuSocio;
     private JMenuItem mnuEntrenamiento;
+    private JMenuItem mnuObjetivo;
 
     public Menu() {
         rootFrame = new JFrame("GymPal");
@@ -41,14 +43,17 @@ public class Menu {
         mnuSocio = new JMenuItem("Socio");
         mnuEjercicio = new JMenuItem("Ejercicios");
         mnuEntrenamiento = new JMenuItem("Entrenamiento");
+        mnuObjetivo = new JMenuItem("Objetivo");
 
         mnuSocio.addActionListener(e -> mostrarPantalla(new EditarSocioUI(SocioController.getInstance(), SocioDTO.fromEntity(SocioController.socioLogueado)).pnlPrincipal));
         mnuEjercicio.addActionListener(e -> mostrarPantalla(new EjercicioUI(EjercicioController.getInstance()).pnlPrincipal));
         mnuEntrenamiento.addActionListener(e -> mostrarPantalla(new EntrenamientoUI(SocioController.getInstance()).pnlPrincipal));
+        mnuObjetivo.addActionListener(e -> mostrarPantalla(new ObjetivoUI(SocioController.getInstance()).pnlPrincipal));
 
         mnuMenu.add(mnuSocio);
         mnuMenu.add(mnuEjercicio);
         mnuMenu.add(mnuEntrenamiento);
+        mnuMenu.add(mnuObjetivo);
 
         mb.add(mnuMenu);
 

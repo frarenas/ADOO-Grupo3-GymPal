@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ar.edu.uade.ui.objetivo.ObjetivoUI">
-  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="pnlPrincipal" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="206" height="108"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <component id="75f67" class="javax.swing.JLabel">
+      <component id="5b2a7" class="javax.swing.JComboBox" binding="comboBoxObjetivo">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <enabled value="false"/>
-          <font size="16" style="1"/>
-          <text value="Agregar Objetivo"/>
+          <model>
+            <item value="Bajar de Peso"/>
+            <item value="Mantener figura"/>
+            <item value="Tonificar"/>
+          </model>
         </properties>
       </component>
-      <hspacer id="a501f">
+      <component id="a6a38" class="javax.swing.JButton" binding="btnElegirObjetivo">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
-      </hspacer>
-      <vspacer id="8fdb4">
+        <properties>
+          <text value="Aceptar"/>
+        </properties>
+      </component>
+      <component id="adf5a" class="javax.swing.JLabel">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
-      </vspacer>
+        <properties>
+          <text value="Elija su objetivo"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>
