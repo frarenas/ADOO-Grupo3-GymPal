@@ -10,7 +10,7 @@ import java.util.List;
 public class Entrenamiento {
 	
 	private List<Ejercicio> ejercicios;
-	private double duracion;
+	private String duracion;
 
 	public Entrenamiento() {
 	}
@@ -19,7 +19,8 @@ public class Entrenamiento {
 		return ejercicios;
 	}
 
-	public Entrenamiento crearEntrenamiento(ExigenciaMuscular nivelExigencia, int nivelAerobicoMin, int nivelAerobicoMax){
+	public Entrenamiento crearEntrenamiento(ExigenciaMuscular nivelExigencia, int nivelAerobicoMin, int nivelAerobicoMax,
+											String duracion){
 
 		TotalEjercicios totalEjercicios = new TotalEjercicios();
 		totalEjercicios.cargarEjercicios();
@@ -32,11 +33,13 @@ public class Entrenamiento {
 					if (nivelExigencia == ej.getExigenciaMuscular()){
 						if (ej.getNivelAerobico() >= nivelAerobicoMin && ej.getNivelAerobico() <= nivelAerobicoMax){
 							this.ejercicios.add(ej);
+
 						}
 					}
 				}
 			}
 		}
+		this.duracion = duracion;
 		return this;
 
 	}

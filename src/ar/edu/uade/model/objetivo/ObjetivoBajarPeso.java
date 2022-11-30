@@ -3,7 +3,6 @@ package ar.edu.uade.model.objetivo;
 import ar.edu.uade.enums.ExigenciaMuscular;
 import ar.edu.uade.model.Medicion;
 import ar.edu.uade.model.NotificacionPush;
-import ar.edu.uade.model.Rutina;
 
 public class ObjetivoBajarPeso extends Objetivo{
     private double pesoObjetivo;
@@ -13,7 +12,7 @@ public class ObjetivoBajarPeso extends Objetivo{
     }
 
     public void crearRutina() {
-        super.getRutina().crearRutina(ExigenciaMuscular.MEDIO, 3, 10);
+        super.getRutina().crearRutina(ExigenciaMuscular.MEDIO, 3, 10, "Entre 1 y 1 hora y media");
 
     }
 
