@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Rutina {
 
-	private int duracionSemanas = 4;
+	private int duracionSemanas = 0;
 	private List<Entrenamiento> entrenamientos;
 
 	public Rutina(List<Entrenamiento> entrenamientos) {
@@ -28,11 +28,15 @@ public class Rutina {
 		entrenamientos.set(entrenamientos.size() - 1, entrenamientoReforzado);
 	}
 	public void simularSemana(){
-		if (duracionSemanas>0)
-			duracionSemanas--;
+		if (duracionSemanas<4)
+			duracionSemanas++;
 	}
 	public boolean rutinaCompleta(){
-		return duracionSemanas == 0;
+		return duracionSemanas == 4;
 	}
+	public Entrenamiento getEntrenamientos(int semana){
+		return this.entrenamientos.get(semana);
+	}
+	public int getDuracionSemanas() { return duracionSemanas; }
 
 }

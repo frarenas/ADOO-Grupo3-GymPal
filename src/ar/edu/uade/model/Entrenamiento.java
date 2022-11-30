@@ -2,6 +2,7 @@ package ar.edu.uade.model;
 
 import ar.edu.uade.enums.ExigenciaMuscular;
 import ar.edu.uade.enums.GrupoMuscular;
+import ar.edu.uade.model.dto.EjercicioDTO;
 import ar.edu.uade.model.ejercicio.Ejercicio;
 import ar.edu.uade.model.ejercicio.TotalEjercicios;
 
@@ -15,8 +16,8 @@ public class Entrenamiento {
 	public Entrenamiento() {
 	}
 
-	public List<Ejercicio> getEjercicios() {
-		return ejercicios;
+	public List<EjercicioDTO> getEjercicios() {
+		return EjercicioDTO.fromEntities(ejercicios);
 	}
 
 	public Entrenamiento crearEntrenamiento(ExigenciaMuscular nivelExigencia, int nivelAerobicoMin, int nivelAerobicoMax){
