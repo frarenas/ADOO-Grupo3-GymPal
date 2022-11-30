@@ -14,7 +14,7 @@ public class Rutina {
 		this.entrenamientos = entrenamientos;
 	}
 
-	public void crearRutina(ExigenciaMuscular nivelExigencia, int nivelAerobicoMin, int nivelAerobicoMax){
+	public void crearRutina(ExigenciaMuscular nivelExigencia, int nivelAerobicoMin, int nivelAerobicoMax, String duracionEntrenamiento){
 
 		for(int i =0; i<5; i++){
 			Entrenamiento entrenamiento = new Entrenamiento();
